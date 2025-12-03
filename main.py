@@ -1,11 +1,8 @@
 from fastapi import FastAPI, HTTPException
 import httpx
 from schema import EmployeeCreate, PromotionCreate
-from mangum import Mangum
 
 app = FastAPI()
-handler = Mangum(app)
-
 
 INCLUSION_URL = "http://localhost:8001"
 FETCH_URL     = "http://localhost:8002"
